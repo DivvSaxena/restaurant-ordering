@@ -8,7 +8,6 @@ header img{
     max-width: 360px;
 }
 
-
 .container{
     display: flex;
     justify-content: space-between;
@@ -81,4 +80,94 @@ header img{
     background-color: #16DB99;
     border: none;
     border-radius: 8px;
+}
+
+.complete-order-btn:hover{
+    background-color: #14f484;
+}
+
+.myzone{
+    position: relative;
+}
+.modal{
+    display: none;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 380px;
+    max-width: 320px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 60px 2px #666;
+}
+.modal-inner{
+    font-size: 20px;
+    font-family: 'Smythe', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.inner-model-information{
+    
+    margin-top: 18px;
+}
+.modal-close-btn{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: wheat;
+    cursor: pointer;
+}
+.inner-model-information input{
+    height: 40px;
+    width: 250px;
+    margin: 7px auto;
+    border-radius: 5px;
+    color: #757575;
+    border-color: #757575;
+    border: 1px solid;
+}
+.pay-btn{
+    height: 40px;
+    width: 250px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: #16DB99;
+}
+
+.pay-btn:hover{
+    background-color: #14f484;
+}
+
+
+.NAME{
+    font-size: 30px;
+    color: #e53170;
+}
+
+.order-display{
+    background-color: rgb(241, 232, 215);
+    max-width: 360px;
+    margin: 0 auto;
+    padding-top:5px;
+    
+}
+
+.order-display h2,
+.order-display h3{
+    padding-left: 10px;
+}
+
+.remove-btn{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
 }
