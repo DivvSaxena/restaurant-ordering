@@ -1,6 +1,7 @@
 import {menuArray} from '/data.js'
 
-let array1 = []
+let arrayOfOrders = []
+
 const renderHereEl = document.getElementById('renderHere')
 const checkoutSectionEl = document.getElementById('checkoutSection')
 let total = 0
@@ -9,6 +10,7 @@ document.addEventListener('click',function(e){
   if(e.target.dataset.id){
     addItemToList(e.target.dataset.id)
     getFeed(e.target.dataset.id)
+    
   }
   if(e.target.dataset.rem){
     removeOrder(e.target.dataset.rem)
@@ -35,9 +37,10 @@ function addItemToList(orderId){
   
   const targetItemObj = menuArray.filter(function(order){
     return order.id === orderId
-})[0]
-
-  return targetItemObj
+   })[0]
+   total = total + targetItemObj.price
+  arrayOfOrders.push(targetItemObj) 
+  renderOrderList()
 }
 
 function getFeed(orderId){
@@ -61,12 +64,17 @@ function getFeed(orderId){
                     </div>
                 </div>
                 `    
-    total = total + price
     render1()
-    
-    checkoutSectionEl.innerHTML +=  feed     
+
+   
 }
-array1.push(getFeed())
+
+function render2(){
+  array1.forEach(function(item){
+    checkoutSectionEl.innerHTML +=  item
+  })
+}
+
 
 function render1(){
   const heading = `
@@ -76,17 +84,27 @@ function render1(){
                     `
   document.getElementById('your-order').innerHTML = heading
   TotalPrice()     
-  console.log(array1)
+  
 }
+
+
 
 
 function removeOrder(orderId){
   const targetItemObj = menuArray.filter(function(item){
     return item.id === orderId
   })
-  let index = arr1.findIndex(menu => menu.id == orderID)
-  arr1.splice(index, 1)
-  getFeed()
+  
+  // console.log(targetItemObj)
+  // console.log(arrayOfOrders)
+
+  let index = arrayOfOrders.findIndex(function(item){
+    return item === orderId
+  })
+  console.log(index)
+  // let index = arrayOfOrders.findIndex(menu => menu.id === orderId)
+  // arrayOfOrders.splice(index, 1)
+  // renderOrderList()
 }
 
 function TotalPrice(){
@@ -98,4 +116,27 @@ function TotalPrice(){
                   <button class="complete-order-btn">Complete order</button>
                     `             
   document.getElementById('last').innerHTML = output
+}
+
+
+
+function renderOrderList(){
+  let items = ``
+  arrayOfOrders.forEach(function(order){
+     items = `
+                <div class="one-item"> 
+                    <div class="item">
+                        <h2>${order.name}</h2>
+                        <button class="remove-btn" data-rem ="${order.id}">remove</button>
+                    </div>
+                    <div class="item-price">
+                        <h3>$${order.price}</h3>
+                    </div>
+                </div>
+                `    
+    
+  })
+  
+  checkoutSectionEl.innerHTML +=  items
+
 }
