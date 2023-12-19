@@ -5,7 +5,7 @@ body {
 header img{ 
     display: flex;
     margin: 0 auto;
-    max-width: 360px;
+    width: 40%;
 }
 
 .container{
@@ -13,12 +13,12 @@ header img{
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    max-width: 360px;
+    width: 40%;
     border-bottom: 2px solid #D2D2D2;
     font-family: 'Smythe', cursive;
 }
 .container h2{
-    font-size: 25px;
+    font-size: 2rem;
 }
 .addbtn{
     font-family: none;
@@ -37,14 +37,14 @@ header img{
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    max-width: 360px;
+    width: 40%;
     font-family: 'Smythe', cursive;
 }
 
 
 .one-item{
     margin: 0 auto;
-    max-width: 360px;
+    width: 40%;
     display: flex;
     justify-content: space-between;
     font-family: 'Smythe', cursive;
@@ -62,7 +62,7 @@ header img{
     font-family: 'Smythe', cursive;
     display: flex;
     align-items: center;
-    max-width: 360px;
+    width: 40%;
     justify-content: space-between;
     margin: 0 auto;
     border-top: 2px solid #393333;
@@ -71,7 +71,7 @@ header img{
 .complete-order-btn{
     font-family: 'Smythe', cursive;
     display: flex;
-    width: 360px;
+    width: 40%;
     margin: 0 auto 20px;
     height: 50px;
     justify-content: center;
@@ -148,16 +148,17 @@ header img{
 
 
 .NAME{
-    font-size: 30px;
+    font-size: 2.2rem;
     color: #e53170;
 }
 
 .order-display{
     background-color: rgb(241, 232, 215);
-    max-width: 360px;
+    width: 40%;
     margin: 0 auto;
     padding-top:5px;
-    
+    text-align: center;
+    font-size: 2.2rem;
 }
 
 .order-display h2,

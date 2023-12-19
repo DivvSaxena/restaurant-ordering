@@ -27,7 +27,7 @@ document.addEventListener('click', function (e) {
 function renderHtml() {
   menuArray.forEach(function (item) {
     renderHereEl.innerHTML += `<div class="container">
-                              <img src="${item.location}" width="100px">
+                              <img src="${item.location}" width="40%">
                               <div>
                                 <h2>${item.name}</h2>
                                 <p>${item.ingredients}</p>
@@ -179,7 +179,7 @@ paymentForm.addEventListener('submit',function(e){
                                                             <div class="order-display">
                                                             <h2>Thanks for Ordering <span class="NAME">${yourName}</span> !</h2>
                                                             <h3>Order is on the Way!</h3>
-                                                            <img src="https://media.giphy.com/media/MhZPXl9QD9s5est6Yi/giphy.gif" width="360px">
+                                                            <img src="https://media.giphy.com/media/MhZPXl9QD9s5est6Yi/giphy.gif" width="100%">
                                                             </div>
                                                     
                                                             `
